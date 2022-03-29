@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  creationTimestamp: null
+  name: ckad-cron
+spec:
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+      name: ckad-cron
+    spec:
+      template:
+        metadata:
+          creationTimestamp: null
+        spec:
+          containers:
+          - image: busybox
+            name: ckad-cron
+            command: 
+            -  /bin/sh
+            -  -c
+            -  date
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: '*/1 * * * *'
+  startingDeadlineSeconds: 22
+status: {}

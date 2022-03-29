@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deployment-xyz
+  name: deployment-xyz
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment-xyz
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deployment-xyz
+    spec:
+      containers:
+      - image: lfccncf/busybox:1
+        name: logger-dev
+        args: [/bin/sh, -c,'while true;do echo "i luv cncf" >> /tmp/log/input.log;sleep 10; done']
+        volumeMounts:
+        - name: tmplog
+          mountPath: /tmp/log
+      - image: lfccncf/fluentd:v0.12
+        name: adapter-zen
+        command: ["/bin/sh", "-c", 'mkdir -p /tmp/log/output.log;tail -f /tmp/log/input.log >> /tmp/log/output.*']
+        volumeMounts:
+        - name: tmplog
+          mountPath: /tmp/log
+        - name: myvol2
+          mountPath: /fluentd/etc  
+      volumes:
+      - name: tmplog
+        emptyDir: {}     

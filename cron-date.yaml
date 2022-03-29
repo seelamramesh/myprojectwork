@@ -1,0 +1,20 @@
+# hello-cron.yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: hello-cron
+spec:
+  schedule: "*/1 * * * *"
+  startingDeadlineSeconds:22 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox
+            args:
+            - /bin/sh
+            - -c
+            - date; echo Hello from the K8s cluster
+          restartPolicy: OnFailure

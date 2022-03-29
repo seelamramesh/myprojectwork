@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: app1
+  name: app1
+spec:
+  containers:
+  - image: lfccncf/arg-output
+    name: app1
+    args: ["-lines","56","-F"]
+    resources: {}
+  restartPolicy: Always
+status: {}
