@@ -1,0 +1,431 @@
+    1  sudo visudo
+    2  sudo apt update
+    3  sudo apt upgrade -y
+    4  docker version
+    5  sudo apt install docker.io
+    6  docker version
+    7  kubectl version
+    8  sudo apt install docker.io
+    9  docker version
+   10  sudo chmod 755 -R /var/run
+   11  docker version
+   12  sudo chmod 755 -R /var/run/docker.sock
+   13  docker version
+   14  sudo chown minnu -R /var/run/docker.sock
+   15  docker version
+   16  kubectl version
+   17  curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64
+   18  chmod +x ./kind
+   19  sudo mv ./kind /usr/local/bin/
+   20  echo $KUBECONFIG
+   21  ls $HOME/.kube
+   22  pwd
+   23  kind create cluster --name wslkind
+   24  kubectl cluster-info
+   25  kubectl get nodes
+   26  kubectl get all --all-namespaces
+   27  exit
+   28  kubectl get all --all-namespaces
+   29  kubectl get nodes
+   30  ls $HOME/.kube
+   31  kubectl cluster-info
+   32  kubectl get nodes
+   33  kind create cluster --name wslkind
+   34  kubectl get nodes
+   35  kubectl cluster-info
+   36  kubectl get nodes
+   37  ls -lart
+   38  cd .kube/cache/
+   39  ls -rlt
+   40  cd http/.diskv-temp/
+   41  ls -lrt
+   42  cd ~
+   43  ls -lrt
+   44  cd .docker/
+   45  ls -lrt
+   46  restart
+   47  sudo restart
+   48  sudo reboot
+   49  kubectl cluster-info
+   50  history
+   51  kind create cluster --name wslkind
+   52  kind delete cluster --name wslkind
+   53  kind create cluster --name wslkind
+   54  kubectl cluster-info
+   55  kubectl get nodes
+   56  kubectl get all --all-namespaces
+   57  kubectl get pods
+   58  kubectl get pods --all-namespaces
+   59  kubectl get resourcequota 
+   60  kubectl get resourcequota -n default
+   61  kubectl get resourcequota --all-namespaces
+   62  kubectl get resourcequota default --all-namespaces
+   63  kubectl get default resourcequota  --all-namespaces
+   64  kubectl get resourcequota --all-namespaces
+   65  exit
+   66  docker info
+   67  docker pull mysql
+   68  docker images
+   69  docker run --name=mytest --restart on-failure -d mysql:latest
+   70  docker ps
+   71  docker exec -it 6036c07c61cf --/bin/bash
+   72  docker run --name=mysql1 --restart on-failure -d mysql/mysql-server:8.0
+   73  docker ps
+   74  docker logs mysql1
+   75  g MySQL 8.0.25-1.2.3-server
+   76  2021-07-05T17:32:36.727295Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.25) starting as process 1
+   77  2021-07-05T17:32:36.733144Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+   78  2021-07-05T17:32:36.830887Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+   79  2021-07-05T17:32:36.906623Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+   80  2021-07-05T17:32:36.999932Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+   81  docker exec -it mysql1 mysql -uroot -p
+   82  shell> docker logs mysql1 2>&1 | grep GENERATED
+   83  docker logs mysql1 2>&1 | grep GENERATED
+   84  docker exec -it mysql1 mysql -uroot -p
+   85  docker exec -it mysql1 bash
+   86  docker ps
+   87  ls -lrt
+   88  pwd
+   89  df -h
+   90  du -sh
+   91  df -h
+   92  cd ~
+   93  pwd
+   94  ls -lrt
+   95  wget http://apache.claz.org/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz
+   96  ping www.google.com
+   97  wget https://ftp.wayne.edu/apache/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
+   98  tar -xf hadoop-3.3.1.tar.gz 
+   99  ls -lrt
+  100  cd hadoop-3.3.1/
+  101  ls -lrt
+  102  which java
+  103  apt-get -y install openjdk-8-jdk-headless
+  104  sudo apt-get -y install openjdk-8-jdk-headless
+  105  which java
+  106  java -version
+  107  sudo apt install python3
+  108  cd ../
+  109  pwd
+  110  wget https://downloads.apache.org/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz
+  111  wget https://www.apache.org/dyn/closer.lua/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
+  112  ls -lrt
+  113  rm -rf spark-3.0.3-bin-hadoop2.7.tgz 
+  114  wget https://dlcdn.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
+  115  tar -xf spark-3.0.3-bin-hadoop2.7.tgz 
+  116  ls -lrt
+  117  cd spark-3.0.3-bin-hadoop2.7/
+  118  ls -lrt
+  119  cd ../
+  120  mv spark-3.0.3-bin-hadoop2.7 spark
+  121  vi ~/.bashrc 
+  122  source ~/.bashrc
+  123  which spark-shell
+  124  spark-submit --class org.apache.spark.examples.SparkPi spark/examples/jars/spark-examples_2.12-3.0.3.jar 10
+  125  spark-shell
+  126  vim $SPARK_HOME/conf/spark-defaults.conf
+  127  mkdir -p /home/minnu/spark/log
+  128  $SPARK_HOME/sbin/start-history-server.sh
+  129  hostname -f
+  130  hostname -i
+  131  exit
+  132  kubectl get pods
+  133  pwd
+  134  ls -lrt
+  135  kubectl get pods
+  136  locate kubectl
+  137  sudo apt install mlocate
+  138  sudo apt update
+  139  sudo apt upgrade -y
+  140  docker version
+  141  kubectl version
+  142  curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64
+  143  chmod +x ./kind 
+  144  sudo mv ./kind /usr/local/bin
+  145  echo $KUBECONFIG
+  146  ls $HOME/.kube
+  147  kind create cluster --name wslkind
+  148  ls \$HOME/.kube/
+  149  ls $HOME/.kube/
+  150  kubectl get pods
+  151  source
+  152  dir
+  153  ls -lrt
+  154  rm -rf ~/.kube/config
+  155  kubectl get pods
+  156  kubectl --kubeconfig ./admin.conf get pods --all-namespaces -o wide
+  157  locate apiserver
+  158  cd /etc/
+  159  ls -lrt
+  160  kubectl config use-context docker-for-desktop
+  161  kubectl config use-context docker-desktop
+  162  kubectl cluster-info
+  163  mkdir -p $HOME/.kube
+  164  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  165  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  166  mkdir -p $HOME/.kube
+  167  locate kubernetes
+  168  docker images
+  169  docker ps -a
+  170  kubectl get pods
+  171  which kubectl
+  172  sudo apt-get install kubernetes
+  173  kubectl get pods
+  174  mkdir -p $HOME/.kube
+  175  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  176  ls -ll
+  177  kubectl get pods
+  178  cd ~
+  179  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  180  ls -lrt
+  181  kubectl get pods
+  182  ./kubectl get pods
+  183  chmod 755 kubectl 
+  184  ./kubectl get pods
+  185  hostname
+  186  kubectl config get-contexts
+  187  ./kubectl get pods
+  188  kubectl config get-contexts
+  189  ./kubectl get pods
+  190  neofetch
+  191  sudo apt install neofetch
+  192  neofetch
+  193  snap list
+  194  snap info microk8s
+  195  sudo snap install microk8s --classic
+  196  systemctl status snap.service
+  197  systemctl status snapd.service
+  198  snap version
+  199  reboot
+  200  snap version
+  201  systemctl status snapd.service
+  202  snap list
+  203  ./kubectl get pods
+  204  ls -lrt
+  205  cd CKAD_PREP/
+  206  ls -lrt
+  207  cd ~
+  208  ./kubectl get pods
+  209  snap list
+  210  systemctl status snapd.service
+  211  reboot
+  212  systemctl status snapd.service
+  213  ./kubectl get pods
+  214  kubectl get pods
+  215  source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+  216  echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
+  217  kubectl get pods
+  218  kubectl logs -f example-job-25ff8 
+  219  kubectl create cronjob --help
+  220  kubectl create cronjob --image=busybox  --schedule=source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+  221  echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+  222  kubectl create cronjob my-job --image=busybox --schedule="*/1 * * * *" -- /bin/bash -c 'echo "current date: $(date)"'  
+  223  kubectl get pods
+  224  kubectl logs -f my-job-2718008
+  225  kubectl get pods
+  226  kubectl logs -f my-job-27180087-r7wj9 
+  227  kubectl describe pod my-job-27180087-r7wj9 
+  228  kubectl edit cj my-job 
+  229  kubectl get pods
+  230  kubectl logs -f my-job-27180090-7gffs 
+  231  kubectl get cronjobs --watch
+  232  kubectl delete cj --all
+  233  kubectl create cronjob my-job --image=busybox --schedule="*/1 * * * *" -- /bin/sh -c 'echo "current date: $(date)"'  
+  234  kubectl get cronjobs --watch
+  235  kubectl l get pods
+  236  kubectl get pods
+  237  kubectl get cronjobs --watch
+  238  kubectl get pods
+  239  kubectl logs -f my-job-27180096-6q674 
+  240  kubectl logs -f my-job-27180097-wkv2q 
+  241  kubectl get cj my-job -o yaml
+  242  kubectl get pods
+  243  kubectl delete cj my-job 
+  244  kubectl get cronjobs --watch
+  245  kubectl get cronjobs 
+  246  kubectl get nodes 
+  247  docker images
+  248  kubectl create cj datejob --image=nginx --schedule="*/1 * * * * *" -- /bin/bash -c '"echo mydate: $(date); sleep 5"' 
+  249  kubectl create cronjob my-job --image=busybox --help
+  250  kubectl create cj datejob --image=nginx --schedule="*/1 * * * *" -- /bin/bash -c '"echo mydate: $(date); sleep 5"' 
+  251  kubectl get cj datejob 
+  252  kubectl get cj datejob --watch
+  253  kubectl get pods
+  254  kubectl describe pod datejob-27180160-2xszb 
+  255  kubectl edit cj datejob 
+  256  kubectl get pods
+  257  kubectl get cj datejob --watch
+  258  kubectl get pods
+  259  kubectl edit cj datejob 
+  260  kubectl get pods
+  261  kubectl get cj datejob --watch
+  262  kubectl get pods
+  263  kubectl edit cj datejob 
+  264  kubectl delete cj my-job 
+  265  kubectl delete cj datejob 
+  266  kubectl create cj datejob --image=busybox --schedule="*/1 * * * *" -- /bin/sh -c 'echo "mydate: $(date); sleep 5"' 
+  267  kubectl get pods
+  268  kubectl get cj datejob --watch
+  269  kubectl get pods
+  270  kubectl logs -f datejob-27180202-n9k5f 
+  271  kubectl get cj datejob --watch
+  272  kubectl get jobs
+  273  kubectl get jobs -w
+  274  kubectl get pods
+  275  kubectl logs -f datejob-27180219-dm2b8 
+  276  kubectl logs -f datejob-27180221-zr822 
+  277  history
+  278  kubectl get nodes
+  279  vim cj2.yaml
+  280  kubectl create -f cj2.yaml 
+  281  kubectl get jobs -w
+  282  kubectl get jobs 
+  283  kubectl delete jobs datejob-2718028
+  284  kubectl delete jobs datejob-2718028*
+  285  kubectl delete jobs datejob-27180282 
+  286  kubectl delete cj datejob 
+  287  kubectl get jobs 
+  288  kubectl get po
+  289  kubectl logs -f cronjob2-27180285-cj4cx 
+  290  kubectl get pods --show-labels 
+  291  kubectl get jobs 
+  292  kubectl get cj
+  293  kubectl delete cj cronjob2 
+  294  kubectl get pods -l app
+  295  kubectl get pods 
+  296  kubectl label pod example-job-25ff8 app=nginx
+  297  kubectl get pods -l app
+  298  kubectl label pod example-job-25ff8 app=nginx1 --overwrite
+  299  kubectl get pods -l app
+  300  kubectl get pods -l app=nginx1
+  301  kubectl label pods example-job-25ff8 app-
+  302  kubectl get pods -l app=nginx1
+  303  kubectl get pods -l app
+  304  kubectl get pods --show-labels 
+  305  kubectl get pods -l app
+  306  kubectl get pods -l app, job-name
+  307  kubectl get pods -l app,job-name
+  308  kubectl get pods -l app
+  309  kubectl get pods -l app, controller-uid
+  310  kubectl get pods -l controller-uid
+  311  kubectl get pods -l app, pod-template-hash
+  312  kubectl get pods -l app,pod-template-hash
+  313  kubectl get pods -l app,controller-uid
+  314  kubectl get pod --selector app=nginx
+  315  kubectl get pod -l app!=nginx
+  316  kubectl get pod -l '!app'
+  317  kubectl run myapp --image=nginx --replicas=2 --labels="env=prod" 
+  318  kubectl run myapp --image=nginx --help
+  319  history |grep replica
+  320  kubectl run myapp --image=nginx --replicas=2 --labels="env=prod" --dry-run=client
+  321  kubectl run myapp --image=nginx --labels="env=prod" --replicas=2 --dry-run=client
+  322  kubectl run myapp --image=nginx --labels="env=prod" 
+  323  kubectl get po
+  324  kubectl get pod -l env
+  325  kubectl create deploy myappi --image=nginx --labels="env=prod" --replicas=2 
+  326  kubectl create deploy myappi --image=nginx --labels="env=prod" --replicas --help
+  327  kubectl create deploy myappi --image=nginx --replicas=2 --help
+  328  kubectl create deploy myappi --image=nginx --replicas=2 -o yaml
+  329  kubectl create deploy myappi --image=nginx --replicas=2 -o yaml > myappi.yaml
+  330  kubectl create deploy myappi --image=nginx --replicas=2 -o yaml > appi.yaml
+  331  kubectl get pod -l
+  332  kubectl get pod 
+  333  kubectl describe pod myappi-79d756d76d-672jg 
+  334  kubectl run deploy myappi --image=nginx --replicas=2 -o yaml > appi.yaml
+  335  kubectl create secrets mysec --help
+  336  kubectl create secret --help
+  337  kubectl create secret generic --help
+  338  kubectl create configmap myconfig --from-literal=mykey=Ramesh 
+  339  kubectl get cm
+  340  vim cm.yaml
+  341  kubectl create -f cm.yaml 
+  342  kubectl get pods
+  343  kubectl logs -f dapi-test-pod 
+  344  cat cm.yaml 
+  345  ls -lrt
+  346  grep pi *
+  347  grep pi *.yaml
+  348  cd CKAD_PREP/
+  349  grep pi *.yaml
+  350  cat job1.yaml 
+  351  kubectl create job alpine --image=lcnf/alpine:vindaloo -- -R 7
+  352  kubectl get pods
+  353  kubectl get jobs
+  354  kubectl delete job alpine
+  355  kubectl create job alpine --image=lcnf/alpine -- vindaloo -R 7
+  356  kubectl get jobs
+  357  kubectl get pods
+  358  kubectl delete job alpine
+  359  kubectl create job alpine --image=lcnf:alpine -- vindaloo -R 7
+  360  kubectl get pods
+  361  kubectl delete job alpine
+  362  kubectl create configmap testconfig --from-literal=mykey=Ramesh --from-literal=mykey1=srikavya 
+  363  kubectl run testpod --image=busybox -- /bin/sh -c "ls /etc/config" --dry-run=client -o yaml > testpod.yaml
+  364  vim testpod.yaml 
+  365  kubectl run testpod --image=busybox --dry-run=client -o yaml > testpod.yaml
+  366  vim testpod.yaml 
+  367  kubectl create -f testpod.yaml 
+  368  kubectl delete -f testpod.yaml
+  369  kubectl create -f testpod.yaml 
+  370  kubectl get pods
+  371  cat testpod.yaml 
+  372  kubectl logs -f testpod 
+  373  kubectl delete -f testpod.yaml
+  374  vim testpod.yaml 
+  375  kubectl create -f testpod.yaml 
+  376  kubectl logs -f testpod 
+  377  kubectl delete -f testpod.yaml
+  378  vim testpod.yaml 
+  379  kubectl create -f testpod.yaml 
+  380  kubectl logs -f testpod 
+  381  vim testpod.yaml 
+  382  kubectl delete -f testpod.yaml
+  383  kubectl logs -f testpod 
+  384  kubectl create -f testpod.yaml 
+  385  kubectl logs -f testpod 
+  386  vim testpod.yaml 
+  387  kubectl exec -it testpod 
+  388  kubectl get pods
+  389  kubectl logs -f testpod 
+  390  vim testpod.yaml 
+  391  kubectl apply -f testpod.yaml 
+  392  kubectl create -f testpod.yaml 
+  393  kubectl delete -f testpod.yaml 
+  394  kubectl create -f testpod.yaml 
+  395  kubectl logs -f testpod 
+  396  ls -lrt
+  397  kubectl create secret generic mysecret --from-literal='username=ramesh' --from-literal='password=minnu123'
+  398  vim mysec.yaml
+  399  kubectl create -f mysec.yaml 
+  400  kubectl get pods
+  401  kubectl logs -f secret-test-pod 
+  402  kubectl exec -it secret-test-pod /bin/bash
+  403  kubectl delete -f mysec.yaml 
+  404  vim mysec.yaml
+  405  cp mysec.yaml sec-vol.yaml
+  406  vim sec-vol.yaml 
+  407  kubectl create -f sec-vol.yaml 
+  408  kubectl get pods
+  409  kubectl logs -f secret-test-pod 
+  410  kubectl exec -it secret-test-pod /bin/bash
+  411  kubectl top pod --sort-by=cpu
+  412  kubectl top pod --sort-by --help
+  413  kubectl top pod  --help
+  414  kubectl top pod  --sort-by="cpu" 
+  415  kubectl top pod  --sort-by='cpu' 
+  416  kubectl top pod  --sort-by=cpu
+  417  kubectl top pod  --all --sort-by=cpu
+  418  kubectl top pods --sort-by=cpu
+  419  kubectl top pods -n kube-system  --sort-by=cpu
+  420  kubectl top po -n kube-system  --sort-by=cpu
+  421  kubectl get pods
+  422  kubectl top po -n default  --sort-by=cpu
+  423  kubectl top po --sort-by=cpu
+  424  kubectl top po --sort-by=cpu --all-namespaces
+  425  kubectl top pod --all-namespaces | sort --reverse --key 4 --numeric
+  426  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+  427  kubectl top po --sort-by=cpu --all-namespaces
+  428  kubectl top pod --all-namespaces | sort --reverse --key 4 --numeric
+  429  kubectl top po --sort-by=cpu --all-namespaces
+  430  kubectl top nodes
+  431  history > hist.txt
